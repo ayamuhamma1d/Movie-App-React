@@ -1,0 +1,13 @@
+a:hover {
+    color:#13b7dd !important;
+}
+a {
+    display: block;
+    padding:  0.5rem 0.5rem;
+
+    color:  rgb(40, 40, 40);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
