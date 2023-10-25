@@ -35,7 +35,7 @@ const MoviesDetails = () => {
         </Grid>
         <Container maxWidth="lg" className='movie__details'>
           <Grid container spacing={8}>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3} lg={3} >
               <img
                 className='movie__img'
                 src={
@@ -45,7 +45,7 @@ const MoviesDetails = () => {
                 alt=""
               />
             </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={12} md={9} lg={9}>
               <h3>
                 {itemDetails.release_date && itemDetails.release_date.split('-')[0]}
                 {itemDetails.first_air_date && itemDetails.first_air_date.split('-')[0]}
@@ -53,11 +53,12 @@ const MoviesDetails = () => {
               <h2>{itemDetails.title ? itemDetails.title.split(' ').slice(0, 4).join(' ') : itemDetails.name?.split(' ').slice(0, 4).join(' ')}</h2>
               <p>{itemDetails.overview}</p>
               <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} spacing={3}>
-                <Grid item xs={4} display={'flex'} alignItems={'center'}>
+             
+                <Grid item xs={12} md={4} lg={4} display={'flex'} alignItems={'center'}>
                   <PlayCircleOutlineIcon fontSize='large' />
                   <span className='data__publish'>WATCH THE TRAILER</span>
                 </Grid>
-                <Grid item xs={8} display={'flex'} alignItems={'center'}>
+                <Grid item xs={12} md={8} lg={6} display={'flex'} alignItems={'center'}>
                   {itemDetails.production_companies && itemDetails.production_companies.length > 0 ? (
                     <p className='production__company'>
                       {`${Math.floor(itemDetails?.runtime / 60)}h ${itemDetails?.runtime % 60
@@ -76,15 +77,15 @@ const MoviesDetails = () => {
                 </Grid>
               </Grid>
               <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} spacing={0}>
-                <Grid item xs={2} display={'flex'} alignItems={'center'}>
+                <Grid item xs={12} md={3} display={'flex'} alignItems={'center'}>
                   <h2 className='average '>{itemDetails?.vote_average?.toFixed(1)}<span className='ms-1'>IMDB</span></h2>
                 </Grid>
-                <Grid item xs={6} >
+                <Grid item xs={12} md={6}>
                   <p className='mb-0 mt-3'>Status</p>
 
                   <p className='text-dark fw-bold'>{itemDetails.status}</p>
                 </Grid>
-                <Grid item xs={4} display={'flex'} alignItems={'center'} >
+                <Grid item xs={4} md={3} display={'flex'} alignItems={'center'} >
                  <button className='btn btn-dark rounded-0 me-2'><AddIcon/></button>
                  <button className='btn btn-bg-white rounded-0 border-1 border-dark '><FavoriteBorderIcon/></button>
                 </Grid>
