@@ -5,9 +5,8 @@ const Loader = ({loading ,error ,children}) => {
   {
     return ( 
        <div className="container py-5 text-center vh-100 d-flex justify-content-center align-items-center">
-       <span className="loader"></span>
-       </div>)
-  }
+       <span className="loader" ></span>
+       </div>) }
     if(error){
     return(
       <>

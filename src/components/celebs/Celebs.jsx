@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import "./celebs.css";
 import useGetPerson from '../../hooks/useGetPerson';
 import Loader from '../loader/Loader';
-
 function Celebs() {
   const [query, setQuery] = useState('aya');
   const [personCeleb, loading, error] = useGetPerson(query);
   const text = "Planet A is a metaphor for human arrogance, in which humans destroy nature and other beings, justify their behavior as, evaluate themselves as and are flattered to be on top of Earth. An experimental musical documentary project, presented as an omnibus of 15 music videos, was created with the goal of challenging the status quo and revealing the truth that lies behind what is happening on this planet right now, along with fighting against all discrimination within it.";
-
   const person = personCeleb.map((person) => {
-    if (person?.known_for[0]?.poster_path) { // Check if the card has an image
+    if (person?.known_for[0]?.poster_path) { 
       return (
         <div className="col-md-3 align-items-stretch" key={person.id}>
           <img
@@ -29,7 +27,6 @@ function Celebs() {
       return null;
     }
   });
-
   const handleSearch = () => {
     if (query.trim() !== '') {
       setQuery(query.trim());
@@ -37,7 +34,6 @@ function Celebs() {
       setQuery('aya');
     }
   };
-
   return (
     <Loader loading={loading} error={error}>
       <div className="container">
@@ -57,5 +53,4 @@ function Celebs() {
     </Loader>
   );
 }
-
 export default Celebs;
