@@ -27,9 +27,7 @@ const MoviesDetails = () => {
               src={
                 'https://image.tmdb.org/t/p/w500' +
                 (itemDetails?.backdrop_path || '')
-              }
-              alt=""
-            />
+              }alt=""/>
             <div className="img__overlay"></div>
           </div>
         </Grid>
@@ -53,7 +51,6 @@ const MoviesDetails = () => {
               <h2>{itemDetails.title ? itemDetails.title.split(' ').slice(0, 4).join(' ') : itemDetails.name?.split(' ').slice(0, 4).join(' ')}</h2>
               <p>{itemDetails.overview}</p>
               <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} spacing={3}>
-             
                 <Grid item xs={12} md={4} lg={4} display={'flex'} alignItems={'center'}>
                   <PlayCircleOutlineIcon fontSize='large' />
                   <span className='data__publish'>WATCH THE TRAILER</span>
@@ -82,16 +79,14 @@ const MoviesDetails = () => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <p className='mb-0 mt-3'>Status</p>
-
                   <p className='text-dark fw-bold'>{itemDetails.status}</p>
                 </Grid>
                 <Grid item xs={4} md={3} display={'flex'} alignItems={'center'} >
-                 <button className='btn btn-dark rounded-0 me-2'><AddIcon/></button>
-                 <button className='btn btn-bg-white rounded-0 border-1 border-dark '><FavoriteBorderIcon/></button>
+                  <button className='btn btn-dark rounded-0 me-2'><AddIcon /></button>
+                  <button className='btn btn-bg-white rounded-0 border-1 border-dark '><FavoriteBorderIcon /></button>
                 </Grid>
               </Grid>
             </Grid>
-
           </Grid>
         </Container>
       </Grid>

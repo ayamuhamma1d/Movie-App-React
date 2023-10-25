@@ -24,5 +24,4 @@ const card = (props) => {
     </Card>
   )
 }
-
 export default card

@@ -1,11 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
 const useGetTrending = (mediaType,page) => {
   const [allTrending, setAllTrending] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     const getAllTrending = async () => {
       try {
@@ -19,7 +17,6 @@ const useGetTrending = (mediaType,page) => {
     };
     getAllTrending();
   }, [mediaType,page]);
-
   return [allTrending, loading, error];
 };
 

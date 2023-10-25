@@ -1,4 +1,3 @@
-
 .nav-links {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.726);
@@ -6,12 +5,10 @@
   font-size: 0.8rem;
   font-weight: 600;
   font-family: 'Product Sans Regular';
-
 }
 .nav-links.active {
   color: #000;
 }
-
 nav {
   background-color: #fff !important;
   box-shadow: none !important;
@@ -19,15 +16,12 @@ nav {
 nav svg {
   color: black;
 }
-
 .nav_logo {
   width: 135px;
 }
-
 .nav_logo_mob {
   width: 60%;
 }
-
 @media (min-width: 600px) and (max-width: 635px) {
   .css-130f8nx {
     display: flex !important;
@@ -37,7 +31,6 @@ nav svg {
     padding: 0.5rem;
   }
 }
-
 .nav_cross {
   margin-left: 35px;
 }

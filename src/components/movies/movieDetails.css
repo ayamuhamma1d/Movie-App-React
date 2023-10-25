@@ -90,12 +90,10 @@ h3 {
         margin-bottom: 7rem;
     }
 }
-
 @media screen and (max-width:1024px) {
     .img__containers {
         display: none;
     }
-
     .movie__details {
         position         : relative;
         left             : 0%;

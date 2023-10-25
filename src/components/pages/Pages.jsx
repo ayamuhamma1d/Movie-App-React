@@ -6,10 +6,8 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Card from './../movies/card'
 import Loader from "../loader/Loader";
-
 const Pages = (props) => {
     const { sx, ...other } = props;
-
     const [page, setPage] = React.useState(1);
     const handleChange = (event, value) => { setPage(value); };
     const [allTrending, loading, error] = useGetTrending('all', page);
@@ -27,8 +25,7 @@ const Pages = (props) => {
                         borderRadius: 2,
                         fontSize: "0.875rem",
                         fontWeight: "700",
-                    }}
-                >
+                    }}>
                     {allTrending.map((trend) => (
                         <Card trend={trend} />
                     ))}
