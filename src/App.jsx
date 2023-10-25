@@ -6,7 +6,7 @@ import MoviesList from './components/movies/MoviesList';
 import MoviesDetails from './components/movies/MoviesDetails';
 import Tv from './components/tv/Tv';
 import NotFoundPage from './components/notFound/NotFoundPage';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbar/NavBar';
 import Pages from './components/pages/Pages';
 import Footer from './components/footer/Footer';
 import Celebs from './components/celebs/Celebs';
