@@ -75,7 +75,7 @@ const Home = () => {
             ? searchResult.map((result) => (
               <Card trend={result} key={result.id} />
             ))
-            : allTrending.slice(0, 10).map((trend) => (
+            : allTrending.slice(0, 8).map((trend) => (
               <Card trend={trend} key={trend.id} />
             ))}
         </Box>
