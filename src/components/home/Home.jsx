@@ -5,13 +5,15 @@ import Select from 'react-select';
 import { Container } from 'react-bootstrap';
 import { Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import FilterListIcon from '@mui/icons-material/FilterList';
 import './home.css';
 import useSearch from '../../hooks/useSearch';
 import Loader from '../loader/Loader';
 import Card from './../movies/card';
 import useGetTrending from '../../hooks/useGetTrending';
+
 const Home = () => {
-  const { control, } = useForm();
+  const {control,} = useForm();
   const [searchQuery, setSearchQuery] = useState('');
   const [mediaType, setMediaType] = useState('movie');
   const [allTrending, loading, error] = useGetTrending(mediaType, 1);
@@ -22,6 +24,10 @@ const Home = () => {
 
   ]);
   const [searchResult, searchLoading, searchError] = useSearch(searchQuery);
+  const handleSearch = () => {
+    console.log(`Searching for '${searchQuery}' in media type '${mediaType}'`);
+  };
+
   return (
     <Loader loading={loading || searchLoading} error={error || searchError}>
       <div className="search">

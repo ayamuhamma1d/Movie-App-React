@@ -53,4 +53,5 @@ function Celebs() {
     </Loader>
   );
 }
+
 export default Celebs;
