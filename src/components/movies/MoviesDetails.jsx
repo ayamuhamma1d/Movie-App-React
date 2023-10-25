@@ -17,7 +17,6 @@ const MoviesDetails = () => {
   const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'left',
   }));
-  console.log(itemDetails);
   return (
     <Loader loading={loading} error={error}>
       <Grid container columnSpacing={{ xs: 1, sm: 1, md: 2 }}>
@@ -98,5 +97,4 @@ const MoviesDetails = () => {
     </Loader>
   );
 };
-
 export default MoviesDetails;
