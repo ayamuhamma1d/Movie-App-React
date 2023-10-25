@@ -1,9 +1,11 @@
-import React from 'react'
-import img from './../../assets/images/SVG-Animation-404-Page.gif'
+import React from 'react';
+import './notFoundPage.css'
+import img from './../../assets/images/SVG-Animation-404-Page.gif';
+
 function NotFoundPage() {
   return (
     <div >
-    <img className='w-100' src={img} />
+    <img   src={img} />
 </div>
   )
 }

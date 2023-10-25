@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Product Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Regular'), url('./assets/fonts/google-sans-cufonfonts-webfont/ProductSans-Regular.woff') format('woff');
+}
+body{
+    font-family: 'Product Sans Regular';
+}
+.container{
+    width:85%;
+    margin: 2rem auto;
+}
+.css-1ri6ub7-MuiPaper-root-MuiCard-root {
+    margin: 3rem 0;
+}
+.css-103chds-MuiPaper-root-MuiCard-root {
+    margin: 1.5rem auto ;
+}
+.css-1lfthva-MuiInputBase-input-MuiFilledInput-input {
+    background:#fff !important;
+}

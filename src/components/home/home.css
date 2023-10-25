@@ -1,0 +1,36 @@
+.home {
+    background-color: black;
+    width: 100%;
+}
+.search{
+    background-color: #F7F7F7 !important;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+}
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root {
+    background-color: transparent !important;
+}
+.header {
+    margin-bottom: 2rem;}
+
+.search__form {
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+  }
+  .search__form__btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+  }
+  .search__form__input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 100%;
+    padding: 10px;
+    color: #6b6868;
+  }

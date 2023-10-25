@@ -1,0 +1,13 @@
+.text {
+
+  display           : -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow          : hidden;
+  font-size         : 0.7rem;
+  height            : 50.38px;
+  color             : #000000;
+}
+.person__img{
+  aspect-ratio: 4/2;
+}
