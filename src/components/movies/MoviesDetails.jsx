@@ -20,7 +20,7 @@ const MoviesDetails = () => {
   return (
     <Loader loading={loading} error={error}>
       <Grid container columnSpacing={{ xs: 1, sm: 1, md: 2 }}>
-        <Grid item xs={12}>
+        <Grid item xs={12} className='img__containers' >
           <div className='img__container'>
             <img
               className='item__img__background'
@@ -53,11 +53,11 @@ const MoviesDetails = () => {
               <h2>{itemDetails.title ? itemDetails.title.split(' ').slice(0, 4).join(' ') : itemDetails.name?.split(' ').slice(0, 4).join(' ')}</h2>
               <p>{itemDetails.overview}</p>
               <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} spacing={3}>
-                <Grid item xs={5} display={'flex'} alignItems={'center'}>
+                <Grid item xs={4} display={'flex'} alignItems={'center'}>
                   <PlayCircleOutlineIcon fontSize='large' />
                   <span className='data__publish'>WATCH THE TRAILER</span>
                 </Grid>
-                <Grid item xs={7} display={'flex'} alignItems={'center'}>
+                <Grid item xs={8} display={'flex'} alignItems={'center'}>
                   {itemDetails.production_companies && itemDetails.production_companies.length > 0 ? (
                     <p className='production__company'>
                       {`${Math.floor(itemDetails?.runtime / 60)}h ${itemDetails?.runtime % 60

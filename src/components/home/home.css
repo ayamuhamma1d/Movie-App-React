@@ -2,27 +2,22 @@
   background-color: black;
   width: 100%;
 }
-
 .search {
   background-color: #F7F7F7 !important;
   padding: 2rem 0;
   margin-bottom: 1rem;
 }
-
 .css-1ff8729-MuiInputBase-root-MuiFilledInput-root {
   background-color: transparent !important;
 }
-
 .header {
   margin-bottom: 2rem;
 }
-
 .search__form {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .search__form__btn {
   outline: none;
   border: none;
@@ -30,7 +25,6 @@
   cursor: pointer;
   height: 100%;
 }
-
 .search__form__input {
   background-color: transparent;
   outline: none;
