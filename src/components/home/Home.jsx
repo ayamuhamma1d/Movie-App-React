@@ -10,7 +10,7 @@ import Loader from '../loader/Loader';
 import Card from './../movies/card';
 import useGetTrending from '../../hooks/useGetTrending';
 const Home = () => {
-  const {control,} = useForm();
+  const { control, } = useForm();
   const [searchQuery, setSearchQuery] = useState('');
   const [mediaType, setMediaType] = useState('movie');
   const [allTrending, loading, error] = useGetTrending(mediaType, 1);
@@ -18,11 +18,9 @@ const Home = () => {
     { value: 'movie', label: 'movie' },
     { value: 'tv', label: 'tv' },
     { value: 'all', label: 'all' },
-
   ]);
   const [searchResult, searchLoading, searchError] = useSearch(searchQuery);
   const handleSearch = () => {
-    // console.log(`Searching for '${searchQuery}' in media type '${mediaType}'`);
   };
   return (
     <Loader loading={loading || searchLoading} error={error || searchError}>
@@ -33,7 +31,7 @@ const Home = () => {
               <button className="search__form__btn" onClick={handleSearch}>
                 <SearchIcon />
               </button>
-              <input
+              <input 
                 className="search__form__input"
                 type="text"
                 autoComplete="off"
@@ -77,7 +75,7 @@ const Home = () => {
             ? searchResult.map((result) => (
               <Card trend={result} key={result.id} />
             ))
-            : allTrending.map((trend) => (
+            : allTrending.slice(0, 10).map((trend) => (
               <Card trend={trend} key={trend.id} />
             ))}
         </Box>
@@ -85,5 +83,4 @@ const Home = () => {
     </Loader>
   );
 };
-
 export default Home;

@@ -34,3 +34,10 @@
   padding: 10px;
   color: #6b6868;
 }
+@media screen and  (max-width:968px) {
+   .header{
+    font-size: 1.5rem;
+    text-align: center;
+ 
+   } 
+}
