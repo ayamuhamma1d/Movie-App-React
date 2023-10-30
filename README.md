@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Movie App React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a movie and TV show application built using React. It utilizes the [themoviedb.org](https://www.themoviedb.org/) API to fetch trending movies, TV shows, and people data, as well as perform searches and display details for individual items.
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+- The application fetches data from the [Trending API](https://api.themoviedb.org/3/trending/all/day?api_key=14bdd69ce887376edfafb09f23f78fe9) to display the daily trending lists of movies, TV shows, and people.
+- The data is filtered locally based on the `media_type` property of the response object, allowing the user to view movies, TV shows, or people.
+- The application provides a search functionality using the [Search API](https://api.themoviedb.org/3/search/multi?api_key=14bdd69ce887376edfafb09f23f78fe9&query={query}). The search is performed on the server-side to retrieve relevant results.
+- Clicking on an item in the list takes the user to a details page where additional information about the item is displayed. The details are fetched from the [Details API](https://api.themoviedb.org/3/{media_type}/{item_id}?api_key=14bdd69ce887376edfafb09f23f78fe9) based on the media type and item ID.
+- The application uses the base URLs `https://image.tmdb.org/t/p/w500/` for poster images and `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/` for backdrop images.
 
-### `npm start`
+## Development Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To set up the development environment and run the project locally, follow these instructions:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository: `git clone https://github.com/your-username/movie-app-react.git`
+2. Navigate to the project directory: `cd movie-app-react`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:3000` to see the application running.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project follows a well-organized file structure to maintain code cleanliness and readability. Here's an overview of the main directories and files:
 
-### `npm run build`
+- `src`: Contains the source code for the application.
+  - `components`: Holds reusable React components used throughout the application.
+  - `pages`: Contains the main pages of the application, such as the home page and details page.
+  - `services`: Includes API service files responsible for making API requests and handling data.
+  - `utils`: Contains utility functions and helper files.
+  - `App.js`: The entry point of the application where the main routing and layout are defined.
+  - `index.js`: The main file that renders the React app and attaches it to the DOM.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The following technologies and libraries were used in the development of this project:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React: A popular JavaScript library for building user interfaces.
+- Create React App: A tool for creating React applications with a pre-configured setup.
+- React Router: A library for handling client-side routing in a React application.
+- Material-UI (MUI): A comprehensive UI toolkit that offers pre-designed components and styling options.
+- Axios: A library for making HTTP requests to fetch data from APIs.
+- Jest and React Testing Library: Used for unit testing React components.
 
-### `npm run eject`
+## Conclusion
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The Movie App React is a fully functional application that allows users to explore trending movies, TV shows, and people. It provides an intuitive interface, search functionality, and detailed information for individual items. The project is built using modern technologies and follows best practices to ensure a clean and maintainable codebase.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To see the live version of the application, visit [https://movie-app-react-o6cv.vercel.app/](https://movie-app-react-o6cv.vercel.app/).
