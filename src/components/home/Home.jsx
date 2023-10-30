@@ -14,7 +14,7 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [mediaType, setMediaType] = useState('movie');
   const [allTrending, loading, error] = useGetTrending(mediaType, 1);
-  const [type, setType] = useState([
+  const [type] = useState([
     { value: 'movie', label: 'movie' },
     { value: 'tv', label: 'tv' },
     { value: 'all', label: 'all' },
