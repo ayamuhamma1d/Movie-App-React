@@ -50,7 +50,7 @@ const MoviesDetails = () => {
               </h3>
               <h2>{itemDetails.title ? itemDetails.title.split(' ').slice(0, 4).join(' ') : itemDetails.name?.split(' ').slice(0, 4).join(' ')}</h2>
               <p>{itemDetails.overview}</p>
-              <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} spacing={3}>
+              <Grid className='movie__details__space' container columnSpacing={{ xs: 1, sm: 1, md: 1 }} spacing={3}>
                 <Grid item xs={12} md={4} lg={4} display={'flex'} alignItems={'center'}>
                   <PlayCircleOutlineIcon fontSize='large' />
                   <span className='data__publish'>WATCH THE TRAILER</span>
