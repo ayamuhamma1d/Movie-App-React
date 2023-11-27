@@ -28,10 +28,12 @@ const MoviesList = () => {
           {moviesTrending.map((trend) => (
             <Card trend={trend} movieType={trend.media_type} />
           ))}
-          <Stack container spacing={2} alignItems="center" >
+
+        </Box>
+     
+        <Stack container spacing={2} alignItems="center" justifyContent={'center'} className="pagination" >
             <Pagination count={20} page={page} onChange={handleChange} />
           </Stack>
-        </Box>
       </div>
     </Loader>
   )
