@@ -31,10 +31,11 @@ const MoviesList = () => {
 
         </Box>
      
-        <Stack container spacing={2} alignItems="center" justifyContent={'center'} className="pagination" >
+    
+      </div>
+      <Stack container spacing={2} alignItems="center" justifyContent={'center'} className="pagination" >
             <Pagination count={20} page={page} onChange={handleChange} />
           </Stack>
-      </div>
     </Loader>
   )
 }

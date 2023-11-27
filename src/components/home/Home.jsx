@@ -9,6 +9,7 @@ import useSearch from '../../hooks/useSearch';
 import Loader from '../loader/Loader';
 import Card from './../movies/card';
 import useGetTrending from '../../hooks/useGetTrending';
+import hero from"./../../assets/images/wallpaperflare.com_wallpaper (3).jpg"
 const Home = () => {
   const { control, } = useForm();
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,6 +25,9 @@ const Home = () => {
   };
   return (
     <Loader loading={loading || searchLoading} error={error || searchError}>
+      <div className="">
+        <img src={hero} alt="" />
+      </div>
       <div className="search">
         <Container maxWidth="lg">
           <div className="search__form">

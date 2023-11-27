@@ -24,7 +24,7 @@ body{
 
     margin-bottom: 20px;
 }
-.css-wjh20t-MuiPagination-ul{
+.pagination{
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;

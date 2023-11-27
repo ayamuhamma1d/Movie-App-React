@@ -6,6 +6,8 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Card from './../movies/card'
 import Loader from "../loader/Loader";
+import hero from"./../../assets/images/wallpaperflare.com_wallpaper (3).jpg"
+
 const Pages = (props) => {
     const { sx, ...other } = props;
     const [page, setPage] = React.useState(1);
@@ -14,6 +16,9 @@ const Pages = (props) => {
     useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [page]);
     return (
         <Loader loading={loading} error={error}>
+              <div className="">
+        <img src={hero} alt="" />
+      </div>
             <div className='container'>
                 <h3 className="header">Latest Movies & TV Shows</h3>
                 <Box
