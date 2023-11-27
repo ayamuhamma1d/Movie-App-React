@@ -9,7 +9,7 @@ const card = (props) => {
     return null;
   }
   return (
-    <Card key={props.trend.id} sx={{ maxWidth: 300 }}>
+    <Card key={props.trend.id} sx={{ maxWidth: 300 }} className='margin card__content'>
       <CardActionArea sx={{ position: 'relative' }}>
         <Link to={`/movie-details/${props.trend.media_type}/${props.trend.id}`} >
           <img className='card__img' src={'https://image.tmdb.org/t/p/w500' + props.trend.poster_path} alt="" srcset="" />

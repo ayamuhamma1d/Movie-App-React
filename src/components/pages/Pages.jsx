@@ -25,13 +25,14 @@ const Pages = (props) => {
                         borderRadius: 2,
                         fontSize: "0.875rem",
                         fontWeight: "700",
+                        
                     }}>
                     {allTrending.map((trend) => (
                         <Card trend={trend} />
                     ))}
 
                 </Box>
-                <Stack container spacing={2} alignItems="center">
+                <Stack container spacing={2}  alignItems="center" justifyContent={'center'}>
                     <Pagination count={20} page={page} onChange={handleChange} />
                 </Stack>
             </div>

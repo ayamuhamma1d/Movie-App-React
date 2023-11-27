@@ -1,7 +1,8 @@
 .card__img{
 aspect-ratio: 4/6;  
 width: 100%;
-}.css-1xez8po-MuiPaper-root-MuiCard-root {
+}
+.card__content {
     margin: 0 auto;
     margin-bottom: 2rem !important;
     
